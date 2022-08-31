@@ -33,26 +33,98 @@
 // }
 
 // 3번
+/*
+알고리즘 풀이 : 입력값에 42로 나눈 나머지가 만약 39 40 41 0 1 2 40 41 0 1 이라면
+중복되지 않는, 즉 서로 다른 값들은 0,1,2,39,40,41 이 된다. 0번 인덱스와 1~9번인덱스 비교, 1번 인덱스와 2~9번인덱스 비교...하는 알고리즘을 통해
+같은 값이 있을때마다 count변수에 + 를 해주도록 하였다. 이렇게 했을 떄 마지막까지 반복하게 되면, 6번인덱스에 있는 40은 그 뒤에 7,8,9번 인덱스의 값과 비교하였을때 중복이 없는셈이 되고
+count에는 중복되는 쌍의 개수가 들어가게 된다(0,0)(1,1)(40,40)(41,41) -> 4개
+중복되지 않는 서로 다른 값은 전체 10개 중 중복되는 값 4개 빼서 6개가 나오게 된다.
+*/
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] array = new int[10];
-        int count = array.length;
+        int count = 0;
         for(int i=0;i<array.length;i++)
         {
             array[i] = sc.nextInt()%42;
         }
-        Arrays.sort(array);
         for(int i=0;i<array.length;i++)
         {
             for(int j=i+1;j<array.length;j++)
             {
                 if(array[i]==array[j])
-                    count--;
+                {
+                    count++;
+                    break;
+                }
             }
         }
-        if(count<0) count=1;
-        System.out.println(count);
+        System.out.println(array.length-count);
     }
 }
+
+// 4번
+// import java.util.*;
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         float[] score = new float[sc.nextInt()];
+//         float sum=0;
+//         for(int i=0;i<score.length;i++)
+//             score[i]=sc.nextFloat();
+//         Arrays.sort(score);       
+//         for(float i:score){
+//             sum += i/score[score.length-1]*100;
+//         }
+//         System.out.println(sum/score.length);
+//     }
+// }
+
+// 5번
+// import java.util.*;
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         String[] str = new String[sc.nextInt()];
+//         for(int i=0;i<str.length;i++)
+//         {
+//             int sum = 0;
+//             str[i]=sc.next();
+//             String[] temp = new String[str[i].length()];
+//             temp = str[i].split("X");
+//             for(int j=0;j<temp.length;j++)
+//             {
+//                 sum+=(temp[j].length())*(temp[j].length()+1)/2;
+//             }
+//             System.out.println(sum);
+//         }
+//     }
+// }
+
+// 6번
+// import java.util.*;
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         for(int i=sc.nextInt();i>0;i--)
+//         {
+//             int[] score = new int[sc.nextInt()];
+//             float avg = 0;
+//             int count = 0;
+//             for(int k=0;k<score.length;k++)
+//             {
+//                 score[k]=sc.nextInt();
+//                 avg+=score[k];
+//             }
+//             avg/=score.length;
+//             for(int j:score)
+//             {
+//                 if(j>avg)
+//                     count++;
+//             }
+//             System.out.println(String.format("%.3f",(float)count/score.length*100)+"%");
+//         }
+//     }
+// }
