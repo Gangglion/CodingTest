@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 // 실버5 - 자료구조는 정말 최고야
-public class Silver5 {
+public class Silver5_1 {
     public static void main(String[] args) {
         // 첫 입력 받고 두번쨰 입력 받고, 세번쨰 입력 받을때 받은내용 배열 저장, 내림차순 확인. 아니면 바로 break, false면 No 출력
         try {

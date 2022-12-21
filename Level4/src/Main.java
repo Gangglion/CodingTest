@@ -1,4 +1,52 @@
-// 1번
+// 1번 - 브론즈5 : 갯수 세기
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) throws Exception {
+//         Scanner sc = new Scanner(System.in);
+//         int count = 0;
+//         int[] array = new int[sc.nextInt()];
+
+//         for(int i=0;i<array.length;i++)
+//             array[i] = sc.nextInt();
+//         int v = sc.nextInt();
+//         for(int i=0;i<array.length;i++){
+//             if(array[i]==v)
+//                 count++;
+//         }
+//         System.out.println(count);
+//     }
+// }
+
+// 2번 - 브론즈5 : X보다 작은 수
+// import java.io.*;
+// import java.util.*;
+// public class Main {
+//     public static void main(String[] args) throws IOException{
+//         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+//         StringTokenizer st = new StringTokenizer(br.readLine());
+//         int size = Integer.parseInt(st.nextToken());
+//         int array[] = new int[size];
+//         int num = Integer.parseInt(st.nextToken());
+
+//         StringTokenizer arraySt = new StringTokenizer(br.readLine());
+//         for(int i=0;i<array.length;i++)
+//             array[i]=Integer.parseInt(arraySt.nextToken());
+//         for(int i=0;i<array.length;i++)
+//         {
+//             if(array[i]<num)
+//                 bw.write(array[i]+" ");
+//             else
+//                 continue;
+//         }
+//         bw.flush();
+//         bw.close();
+//     }
+// }
+
+// 3번 - 브론즈3 : 최소, 최대
 // import java.util.*;
 
 // public class Main {
@@ -15,7 +63,7 @@
 //     }
 // }
 
-// 2번
+// 4번 - 브론즈3 : 최댓값
 // import java.util.*;
 // public class Main {
 //     public static void main(String[] args) {
@@ -32,7 +80,25 @@
 //     }
 // }
 
-// 3번
+// 5번 - 브론즈5 : 과제 안내신 분...?(배열 사용)
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<Integer> ar = new ArrayList<>();
+        for(int i=0;i<28;i++)
+            ar.add(Integer.parseInt(br.readLine()));
+        for(int i=1;i<=30;i++){
+            if(ar.contains(i))
+                continue;
+            else
+                System.out.println(i);
+        }
+    }
+}
+
+// 6번 - 브론즈2 : 나머지
 /*
 알고리즘 풀이 : 입력값에 42로 나눈 나머지가 만약 39 40 41 0 1 2 40 41 0 1 이라면
 중복되지 않는, 즉 서로 다른 값들은 0,1,2,39,40,41 이 된다. 0번 인덱스와 1~9번인덱스 비교, 1번 인덱스와 2~9번인덱스 비교...하는 알고리즘을 통해
@@ -40,32 +106,32 @@
 count에는 중복되는 쌍의 개수가 들어가게 된다(0,0)(1,1)(40,40)(41,41) -> 4개
 중복되지 않는 서로 다른 값은 전체 10개 중 중복되는 값 4개 빼서 6개가 나오게 된다.
 */
-import java.util.*;
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[] array = new int[10];
-        int count = 0;
-        for(int i=0;i<array.length;i++)
-        {
-            array[i] = sc.nextInt()%42;
-        }
-        for(int i=0;i<array.length;i++)
-        {
-            for(int j=i+1;j<array.length;j++)
-            {
-                if(array[i]==array[j])
-                {
-                    count++;
-                    break;
-                }
-            }
-        }
-        System.out.println(array.length-count);
-    }
-}
+// import java.util.*;
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[] array = new int[10];
+//         int count = 0;
+//         for(int i=0;i<array.length;i++)
+//         {
+//             array[i] = sc.nextInt()%42;
+//         }
+//         for(int i=0;i<array.length;i++)
+//         {
+//             for(int j=i+1;j<array.length;j++)
+//             {
+//                 if(array[i]==array[j])
+//                 {
+//                     count++;
+//                     break;
+//                 }
+//             }
+//         }
+//         System.out.println(array.length-count);
+//     }
+// }
 
-// 4번
+// 7번 - 브론즈1 : 평균
 // import java.util.*;
 // public class Main {
 //     public static void main(String[] args) {
@@ -82,7 +148,7 @@ public class Main {
 //     }
 // }
 
-// 5번
+// 8번 - 브론즈2 : OX퀴즈
 // import java.util.*;
 // public class Main {
 //     public static void main(String[] args) {
@@ -103,7 +169,7 @@ public class Main {
 //     }
 // }
 
-// 6번
+// 9번 - 브론즈1 : 평균은 넘겠지
 // import java.util.*;
 // public class Main {
 //     public static void main(String[] args) {
