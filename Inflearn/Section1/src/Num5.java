@@ -35,3 +35,34 @@ public class Num5 {
         System.out.println(T.solution(br.readLine()));
     }
 }
+
+// 복습 - 완료시 주석처리
+// import java.io.*;
+
+// public class Num5 {
+//     public String solution(String str) {
+//         String answer = "";
+//         char[] c = str.toCharArray();
+//         int lt = 0;
+//         int rt = c.length - 1;
+//         while (lt < rt) {
+//             if(!Character.isAlphabetic(c[lt]))
+//                 lt++;
+//             else if(!Character.isAlphabetic(c[rt]))
+//                 rt--;
+//             else {
+//                 char temp = c[rt];
+//                 c[rt] = c[lt];
+//                 c[lt] = temp;
+//                 lt++;
+//                 rt--;
+//             }
+//         }
+//         return String.valueOf(c);
+//     }
+//     public static void main(String[] args) throws IOException {
+//         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//         Num5 T = new Num5();
+//         System.out.println(T.solution(br.readLine()));
+//     }
+// }

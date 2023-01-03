@@ -30,3 +30,22 @@ public class Num6 {
         System.out.println(T.solution(br.readLine()));
     }
 }
+
+// // 복습 - 완료시 주석처리
+// import java.io.*;
+
+// public class Num6 {
+//     public String solution(String str) {
+//         String answer = "";
+//         for (int i = 0; i < str.length(); i++) {
+//             if(i == str.indexOf(str.charAt(i)))
+//                 answer += str.charAt(i);
+//         }
+//         return answer;
+//     }
+//     public static void main(String[] args) throws IOException {
+//         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//         Num6 T = new Num6();
+//         System.out.println(T.solution(br.readLine()));
+//     }
+// }
