@@ -41,3 +41,37 @@ public class Num2 {
             System.out.print(x+" ");
     }
 }
+
+/**
+//  * 복습 - 버블정렬(1월7일)
+//  * 인접한 두 수를 비교하여 정렬, 정렬, 정렬을 반복하면 1회전시 제일 큰수가 맨 끝으로감, 반복하면 오름차순 정렬됨
+//  * i for문은 전체를 돌겠다는 범위를 지정하고, j for문은 인접한 두 수를 비교하기 위한 범위를 지정한다. 1회전할때마다 마지막 수가 정해지므로
+//  * j의 반복범위는 i가 증가함에 따라 하나씩 줄어든다. 정해진 부분까지 굳이 인접한 두수를 비교할 필요 없으므로
+//  */
+
+// import java.util.*;
+
+// public class Num2 {
+//     public int[] solution(int n, int[] arr) {
+//         for (int i = 0; i < n-1; i++) {
+//             for (int j = 0; j < n - i - 1; j++) {
+//                 if (arr[j] > arr[j+1]) {
+//                     int tmp = arr[j+1];
+//                     arr[j+1] = arr[j];
+//                     arr[j] = tmp;
+//                 }
+//             }
+//         }
+//         return arr;
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         Num2 t = new Num2();
+//         int n = sc.nextInt();
+//         int[] arr = new int[n];
+//         for(int i=0;i<n;i++)
+//             arr[i] = sc.nextInt();
+//         for(int x : t.solution(n,arr))
+//             System.out.print(x+" ");
+//     }
+// }

@@ -44,3 +44,45 @@ public class Num4 {
             System.out.print(x + " ");
     }
 }
+
+// /**
+//  * 복습 - LRU알고리즘
+//  * miss와 hit을 판별하여 miss 일때는 캐시에 있는 작업을 한개씩 뒤로 밀고 현재 작업을 제일 앞에 넣는다
+//  * hit일때는 hit인 부분 앞에있는 작업을 전부 한개씩 민 다음 현재작업(hit인 작업)을 제일 앞에 넣는다
+//  */
+// import java.util.*;
+
+// public class Num4 {
+//     public int[] solution(int s, int n, int[] work) {
+//         int[] cache = new int[s];
+//         for (int x : work) {
+//             int pos=-1;
+//             for (int i = 0; i < s; i++) {
+//                 if (cache[i] == x)
+//                     pos = i;
+//             }
+//             if (pos == -1) { // miss일 경우
+//                 for(int i=s-1;i>0;i--)
+//                     cache[i] = cache[i-1];
+//             } else { //  hit일 경우
+//                 for (int i = pos; i >0; i--) {
+//                     cache[i] = cache[i-1];
+//                 }
+//             }
+//             cache[0] = x;
+//         }
+//         return cache;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         Num4 t = new Num4();
+//         int s = sc.nextInt();
+//         int n = sc.nextInt();
+//         int[] work = new int[n];
+//         for(int i=0;i<n;i++)
+//             work[i] = sc.nextInt();
+//         for(int x : t.solution(s, n, work))
+//             System.out.print(x+" ");
+//     }
+// }
